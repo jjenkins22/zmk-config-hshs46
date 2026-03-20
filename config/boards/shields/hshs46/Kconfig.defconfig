@@ -1,12 +1,19 @@
 # Copyright (c) 2021-2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_HSHS46_LEFT || SHIELD_HSHS46_RIGHT
+if SHIELD_HSHS46_LEFT || SHIELD_HSHS46_RIGHT || SHIELD_HSHS46_DONGLE
 
 config ZMK_KEYBOARD_NAME
     default "HSHS46"
 
 config ZMK_SPLIT
+    default y
+
+endif
+
+if SHIELD_HSHS46_DONGLE
+
+config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
