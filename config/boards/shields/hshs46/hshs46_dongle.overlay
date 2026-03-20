@@ -11,6 +11,6 @@
 
     kscan0: kscan0 {
         compatible = "zmk,kscan-mock";
-        exit-after = <0>;
+        exit-after;
     };
 };
