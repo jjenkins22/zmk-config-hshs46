@@ -23,3 +23,13 @@ include:
     shield: hshs46_right nice_view_adapter nice_view
   - board: nice_nano//zmk
     shield: settings_reset
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  build:
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      artifact-name: firmware
+      boards-shields: |
+        nice_nano//zmk hshs46_left nice_view nice_view_adapter
+        nice_nano//zmk hshs46_right nice_view nice_view_adapter
+        seeeduino_xiao_ble//zmk hshs46_dongle
