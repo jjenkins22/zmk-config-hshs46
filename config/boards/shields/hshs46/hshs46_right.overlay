@@ -20,16 +20,3 @@
         , <&pro_micro 19 GPIO_ACTIVE_HIGH> // col0 in the schematic
         ;
 };
-&pro_micro_spi {
-    status = "okay";
-    cs-gpios = <&pro_micro 4 GPIO_ACTIVE_LOW>;
-
-    nice_view: ls0xx@0 {
-        compatible = "sharp,ls0xx";
-        spi-max-frequency = <1000000>;
-        reg = <0>;
-        width = <160>;
-        height = <68>;
-        label = "DISPLAY";
-    };
-};
