@@ -1,0 +1,20 @@
+/*
+ * Copyright (c) 2021-2022 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "hshs46.dtsi"
+
+&kscan0 {
+    compatible = "zmk,kscan-mock";
+    exit-after = <0>;
+};
+```
+
+Then create another new file called `hshs46_dongle.conf` with this content:
+```
+CONFIG_ZMK_SPLIT=y
+CONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
+CONFIG_ZMK_USB=y
+CONFIG_BT_CTLR_TX_PWR_PLUS_8=y
