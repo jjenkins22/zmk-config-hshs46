@@ -10,13 +10,3 @@
     compatible = "zmk,kscan-mock";
     exit-after = <0>;
 };
-```
-
-Make sure the file ends after the closing `};` with nothing else after it — no backticks, no extra text.
-
-4. Then check `hshs46_dongle.conf` the same way — it should contain **only** these four lines:
-```
-CONFIG_ZMK_SPLIT=y
-CONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
-CONFIG_ZMK_USB=y
-CONFIG_BT_CTLR_TX_PWR_PLUS_8=y
