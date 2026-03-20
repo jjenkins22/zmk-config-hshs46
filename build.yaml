@@ -17,7 +17,7 @@ include:
     shield: hshs46_left nice_view_adapter nice_view
   - board: nice_nano//zmk
     shield: hshs46_right nice_view_adapter nice_view
-  - board: seeeduino_xiao_ble//zmk
+  - board: xiao_ble//zmk
     shield: hshs46_dongle
   - board: nice_nano//zmk
     shield: settings_reset
